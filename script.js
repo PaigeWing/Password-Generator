@@ -53,7 +53,6 @@ function generatePassword() {
     possibleCharacters += symbols.join("");
   }
 
-
   for (let i = 0; i < characterAmount; i++) {
     let randomIndex = Math.floor(Math.random() * possibleCharacters.length);
     newPassword += possibleCharacters[randomIndex];
@@ -61,13 +60,10 @@ function generatePassword() {
   writePassword(newPassword);
 }
     
- 
-
   //Creating Password
 function writePassword(password) {
 var passwordText = document.querySelector("#password")
 passwordText.value = password;
-
 }
   
 generateBtn.addEventListener("click", generatePassword);
