@@ -19,11 +19,9 @@ function generatePassword() {
   var characterAmount = prompt("How many characters would you like your password to contain?");
 
   if (characterAmount === "" || characterAmount < 8) {
-    console.log("Password must contain at least 8 characters.");
     alert("Password must contain at least 8 characters.");
     return;
   } else if (characterAmount > 128) {
-    console.log("Password must be less than 129 characters.");
     alert("Password must be less than 129 characters.");
     return;
   }
@@ -31,9 +29,8 @@ function generatePassword() {
    var lowerResponse = confirm("Click OK to allow lowercase letters?");
    var numberResponse = confirm("Click OK to allow numbers?");
    var symbolResponse = confirm("Click OK to allow special characters?");
-    console.log(possibleCharacters);
 
-    if (!upperResponse && !lowerResponse  && !numberResponse && !symbolResponse) {
+  if (!upperResponse && !lowerResponse  && !numberResponse && !symbolResponse) {
       alert("At least one character type must be selected.");
       return generatePassword()
   }
